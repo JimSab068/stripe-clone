@@ -1,0 +1,7 @@
+[
+  { "id": "t1", "amount": 99.99, "status": "success", "date": "2026-06-01", "customer": "Alice" },
+  { "id": "t2", "amount": 79.99, "status": "pending", "date": "2026-06-02", "customer": "Bob" },
+  { "id": "t3", "amount": 49.99, "status": "failed", "date": "2026-06-03", "customer": "Carol" },
+  { "id": "t4", "amount": 299.99, "status": "success", "date": "2026-06-04", "customer": "Dave" },
+  { "id": "t5", "amount": 19.99, "status": "success", "date": "2026-06-05", "customer": "Eve" }
+]
