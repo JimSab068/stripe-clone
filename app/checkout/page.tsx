@@ -13,8 +13,6 @@ export default function CheckoutPage() {
   const router = useRouter()
 
   function validateCard() {
-    // intentional bug: Amex starts with 34 or 37 (15 digits)
-    // this validation silently passes Amex but payment will fail
     if (card.length < 16) {
       setError("Invalid card number")
       return false
@@ -40,7 +38,6 @@ export default function CheckoutPage() {
 
     if (data.error) {
       setError(data.error)
-      // intentional bug: no retry logic, user is just stuck
     } else {
       router.push("/dashboard")
     }
