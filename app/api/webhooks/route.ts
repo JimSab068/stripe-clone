@@ -16,7 +16,7 @@ export async function POST(request: Request) {
   }
 
   if (processedEvents.has(id)) {
-    return Response.json({ received: true, skipped: true, eventId: id })
+    console.log(`Processing duplicate event: ${id}`)
   }
 
   processedEvents.add(id)
@@ -36,3 +36,4 @@ export async function GET() {
     { id: "evt_003", type: "subscription.cancelled", date: "2026-06-24T10:15:00Z", status: "processed" }
   ])
 }
+
