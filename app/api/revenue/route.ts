@@ -14,9 +14,6 @@ export async function GET(request: Request) {
     return date >= fromDate && date <= toDate
   })
 
-  if (filtered.length === 0) {
-    return Response.json({ data: [], total: 0, average: 0 })
-  }
 
   const total = filtered.reduce((sum, r) => sum + r.revenue, 0)
   const average = total / filtered.length
