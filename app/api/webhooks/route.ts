@@ -6,7 +6,7 @@ export async function POST(request: Request) {
   try {
     body = await request.json()
   } catch {
-    return Response.json({ error: "Malformed payload" }, { status: 400 })
+    throw new Error("Malformed webhook payload")
   }
 
   const { id, type, payload } = body
