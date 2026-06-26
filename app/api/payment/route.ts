@@ -9,6 +9,13 @@ export async function POST(request: Request) {
     )
   }
 
+  if (Math.random() < 0.4) {
+    return Response.json(
+      { error: "Internal payment error" },
+      { status: 500 }
+    )
+  }
+
 
   return Response.json({ success: true, transactionId: "txn_" + Date.now() })
 }
